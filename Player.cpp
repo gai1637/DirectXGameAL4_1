@@ -8,7 +8,14 @@ void Player::Initialize() {
 	worldTransform_.Initialize();
 	viewProjection_.Initialize();
 }
-Player::~Player() {
+Player::Player() {
+	textureHandle_ = 0u;
+	sprite_ = nullptr;
+	model_ = nullptr;
+	worldTransform_;
+	viewProjection_;
+}
+	Player::~Player() {
 	delete sprite_;
 	delete model_;
 }

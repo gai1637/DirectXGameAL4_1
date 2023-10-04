@@ -9,13 +9,17 @@
 #include "WorldTransform.h"
 class Player {
 private:
-	uint32_t textureHandle_ = 0;
-	Sprite* sprite_ = nullptr;
-	Model* model_ = nullptr;
+	uint32_t textureHandle_;
+	Sprite* sprite_;
+	Model* model_;
 	WorldTransform worldTransform_;
 	ViewProjection viewProjection_;
 
 public:
+	/// <summary>
+	/// コンストクラタ
+	/// </summary>
+	Player();
 	/// <summary>
 	/// デストラクタ
 	/// </summary>

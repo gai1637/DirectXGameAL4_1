@@ -2,17 +2,18 @@
 #include "Player.h"
 #include "TextureManager.h"
 #include <cassert>
+#include<memory>
 
-GameScene::GameScene() {}
+GameScene::GameScene() { }
 
-GameScene::~GameScene() { delete player; }
+GameScene::~GameScene() { }
 
 void GameScene::Initialize() {
 
 	dxCommon_ = DirectXCommon::GetInstance();
 	input_ = Input::GetInstance();
 	audio_ = Audio::GetInstance();
-
+	player = std::make_unique<Player>();
 	player->Initialize();
 }
 

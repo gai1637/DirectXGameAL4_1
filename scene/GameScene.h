@@ -45,9 +45,10 @@ private: // メンバ変数
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 
-	Player* player;
+	
 
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
+	std::unique_ptr<Player> player;
 };
